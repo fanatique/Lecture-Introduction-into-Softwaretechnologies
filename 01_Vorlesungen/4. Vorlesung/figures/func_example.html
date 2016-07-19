@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Titel dieses HTML-Dokuments</title>
+
+    <script type="text/javascript">
+      function berechneMwst(brutto) {
+        var mwst = 0.19;
+        var betrag = brutto * mwst;
+        var eingabeFeld = document.querySelector('#mwst');
+        eingabeFeld.value = betrag;
+      }
+    </script>
+  </head>
+  <body style="padding:15px;">
+    <h2>Mehrwertsteuer berechnen</h2>
+
+    Betrag:
+    <input onblur="berechneMwst( this.value )" type="number"/>
+
+    Mehrwertsteuer:
+    <input id="mwst" type="number" disabled/>
+  </body>
+</html>
